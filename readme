@@ -1,0 +1,45 @@
+---------------------------------------------
+bDetect | bullet detection framework - Readme
+---------------------------------------------
+
+Author: Fabrizio_T, Ollem (MP code)
+Additional code: TPW
+File Name: bdetect.sqf
+License: GNU/GPL
+
+---------------------------------------------
+WHAT IS IT
+---------------------------------------------
+
+It's a small SP (Single Player) framework in form of single .sqf file, named "bdetect.sqf". Basic scripting knowledge required.
+It was made in order to easily detect any flying bullets close to infantrymen, given some basic configuration (See: CONFIGURATION).
+Once a bullet is found being closer enough to some unit, a custom callback function is called: it's up to you defining the contents of this callback function.
+
+---------------------------------------------
+REQUIREMENTS
+---------------------------------------------
+
+* ArmA3 (version 0.80 and upper)
+* CBA - Community Made Addons: https://dev-heaven.net/projects/cca/wiki/CBA
+
+
+---------------------------------------------
+HOW TO RUN IT
+---------------------------------------------
+
+Running bDetect is straightforward if you have some basic knowledge of .sqf scripting. 
+There are 5 simple required steps, to be executed from within your own .sqf script file:
+
+* Load "bdetect.sqf"  from within your own script. Put "bdetect.sqf" into your mission folder and call it from there.
+* Set any bDetect variables you wish having values different than default.
+* Set bDetect "bdetect_callback" special variable: it holds the name of your own callback function, which will be executed on a per-unit basis when a bullet is detected close.
+* Declare your own callback function, named as "bdetect_callback", and define its payload. Make function as simple, fast and compact as possible.
+* Initialize bDetect and wait for completion.
+
+Other stuff is optional.
+
+---------------------------------------------
+INITIALIZATION EXAMPLE
+---------------------------------------------
+
+See bottom part of bdetect.sqf for instructions.
